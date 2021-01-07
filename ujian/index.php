@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Read Data</title>
+        <title>membaca Data</title>
         <link rel="stylesheet" type="text/css" href="../assets/cms_style.css"/>
     </head>
     <body>
