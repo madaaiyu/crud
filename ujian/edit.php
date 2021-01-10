@@ -15,7 +15,7 @@ if(isset($_GET['id'])){
     <body>
     <h1>EDIT DATA</h1>
     <form action="edit.php" method="post">
-    <table border="1" cellspacing="0">
+    <table border="0" cellspacing="0">
         <input type="hidden" name="id" value="'.$data->id.'">
         <tr><td>Nama</td><td><input type="text" name="nama" value="'.$data->nama.'"></td></tr>
         <tr><td>Kelas</td><td><input type="text" name="kelas" value="'.$data->kelas.'"></td></tr>
