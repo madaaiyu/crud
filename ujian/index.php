@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>READ DATA</h1>
-        <table border="1" cellsapcing="0" >
+        <table border="0" cellsapcing="0" >
             <tr>
                 <td>No</td>
                 <td>Nama</td>
@@ -15,33 +15,35 @@
                 <td>Option</td>
             </tr>
             <?php
-            include("lib.php");
-            $no = 0;
-            $lib = new lib();
-            $read = $lib->readData();
-            while($data = $read->fetch(PDO::FETCH_OBJ)){
-                $no++;
-                    echo "
-                        <tr>
-                            <td>$no</td>
-                            <td>$data->$nama</td>
-                            <td>$data->$kelas</td>
-                            <td>$data->$jurusan</td>
-                            <td>
-                            <a href='edit.php?id=$data->$id'><button>Edit</button></a>
-                            ||
-                            <a href='index.php?delete=$data->$id'><button>Delete</button></a>
-                            </td>
-                        </tr>
-                    ";
-            }
-            ?>
+    include("lib.php");
+    $no = 0;
+    $library = new lib();
+    $read = $library->readData();
+    while($data = $read->fetch(PDO::FETCH_OBJ)){
+    $no++;
+        echo "
+            <tr>
+                <td>$no</td>
+                <td>$data->nama</td>
+                <td>$data->kelas</td>
+                <td>$data->jurusan</td>
+                <td>
+                    <a href='edit.php?id=$data->id'><button>Edit</button></a>
+                    ||
+                    <a href='index.php?delete=$data->id'><button>Delete</button></a>
+                </td>
+            </tr>
+        ";
+    }
+?>
         </table>
         <a href="create.php"><button>Create</button></a>
     </body>
 </html>
 
 <?php
+
+$lib = new lib();
 if(isset($_GET['delete'])){
     $delete = $lib->deleteData($_GET['delete']);
     header("location:index.php");
