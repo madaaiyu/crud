@@ -8,7 +8,7 @@
 </head>
 <body>
 <form action="create.php" method="post">
-<table border="1" cellspacing="0">
+<table border="0" cellspacing="0">
     <input type="hidden" name="id">
     <tr><td>Nama</td><td><input type="text" name="nama"></td></tr>
     <tr><td>Kelas</td><td><input type="text" name="kelas"></td></tr>
