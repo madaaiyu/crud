@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>Read Data</title>
-    <link rel="stylesheet" type="text/css" href="../assets/cms_style.css">
 </head>
 <script>
 function inform(){
